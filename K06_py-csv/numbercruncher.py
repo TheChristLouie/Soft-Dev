@@ -3,16 +3,16 @@
 #SoftDev
 #File Reading
 #2024/9/18
-#Time Spent:
+#Time Spent: 30
 
 import random
 occupationsList = []
 with open("occupations.csv","r") as file:
     f = file.read().split("\n")
     for item in f:
-        item.split(',')
-        print(item + "\n")
-        print(occupationsList)
+        i = item.split(',')
+        print(i + "\n")
+        #print(occupationsList)
         if (item[0] != "Total"):
             occupationsList.append({item[0],item[1]})
     
