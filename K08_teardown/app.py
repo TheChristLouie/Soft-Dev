@@ -3,7 +3,7 @@
 #SoftDev
 #File Reading
 #2024/9/18
-#Time Spent: 
+#Time Spent: 30
 
 '''
 DISCO:
@@ -11,11 +11,11 @@ DISCO:
 
 QCC:
 0. In c the @ is a suppressor
-1. 
-2. 
-3. 
-4. 
-5. 
+1. The / seems to be some sort of route like in the terminal.
+2. An erorr appears when it runs - prints to external server http://127.0.0.1:5000
+3. "No hablo queso!"
+4. It will appear on the external server at the link http://127.0.0.1:5000 that can be put in the browser. Also when the site is accessed stuff prints in the terminal.
+5. html website
  ...
 
 INVESTIGATIVE APPROACH:
