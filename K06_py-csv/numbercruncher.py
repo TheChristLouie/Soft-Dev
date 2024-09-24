@@ -6,27 +6,28 @@
 #Time Spent: 30
 
 import random
-occupationsList = []
-with open("occupations.csv","r") as file:
-    f = file.read().split("\n")
-    for item in f:
-        i = item.split(',')
-        print(i + "\n")
-        #print(occupationsList)
-        if (item[0] != "Total"):
-            occupationsList.append({item[0],item[1]})
-    
-def randomOccupation():
-    percentagesum = 0;
-    for job in occupationsList:
-        percentagesum += job[0]
-    if (percentagesum == 0):
-        return null
-    x = random.randint(0,percentagesum)
-    for job in occupationsList:
-        x -= job[0]
-        if x <= 0:
-            return job[1]
-    return null
+import csv
 
-print(randomOccupation)
+occupationsList = []
+
+with open("occupations.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)
+    for row in reader:
+        job = row[0]
+        percentage = float(row[1])
+        if job != "Total":
+            occupationsList.append((job, percentage))
+
+def randomOccupation():
+    percentagesum = sum(job[1] for job in occupationsList)
+    if percentagesum == 0:
+        return None
+    x = random.uniform(0, percentagesum)
+    for job, percentage in occupationsList:
+        x -= percentage
+        if x <= 0:
+            return job
+    return None
+
+print(randomOccupation())
