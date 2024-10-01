@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- 
+  Death Row Coders: Kevin Lin, Raymond Lin, Christopher Louie
+  SoftDev
+  Sep 2024
+ -->
+<html>
+
+    <head>
+        <title> {{title}} </title>
+    </head>
+
+    <body>
+        <h2> Randomly selected occupation: {{ occupation }} </h2>
+        <h1> Occupations table </h1>
+        <br>
+        <table>
+            {% for row in collection %}
+                <tr>
+                {% for item in row %}
+                    <td>{{ item }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+</html>

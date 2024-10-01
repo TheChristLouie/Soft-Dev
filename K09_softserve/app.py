@@ -37,7 +37,7 @@ def page():
     <!DOCTYPE html>
     <html>
       <body>
-            <p>Traveling team Sasha, Christopher (Home team Death Row Coders: Raymond, Christopher, Kevin)</p>
+            <p>Death Row Coders: Raymond, Christopher, Kevin)</p>
             <p>SoftDev</p>
             <p>File Reading + HTML coding</p>
             <p>2024/9/18</p>
