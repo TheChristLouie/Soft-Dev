@@ -4,25 +4,61 @@
   SoftDev
   Sep 2024
  -->
-<html>
-
-    <head>
-        <title> {{title}} </title>
-    </head>
-
-    <body>
-        <h2> Randomly selected occupation: {{ occupation }} </h2>
-        <h1> Occupations table </h1>
-        <br>
-        <table>
-            {% for row in collection %}
-                <tr>
-                {% for item in row %}
-                    <td>{{ item }}</td>
-                {% endfor %}
-                </tr>
-            {% endfor %}
-        </table>
-    </body>
-
-</html>
+ <html>
+     <style>
+         table {
+             width: 80%;
+             margin: 20px auto;
+             font-family: Arial, sans-serif;
+             border-collapse: collapse;
+         }
+         th, td {
+             padding: 10px;
+             border: 2px solid black;
+             background-color: #d5c9af;
+             text-align: left;
+         }
+         th {
+             background-color: #b8b0a0;
+         }
+         a {
+             color: #333;
+             text-decoration: none;
+         }
+         a:hover {
+             color: #0056b3;
+             text-decoration: underline;
+         }
+         h1, h2 {
+             text-align: center;
+             font-family: Arial, sans-serif;
+         }
+     </style>
+ 
+     <head>
+         <title> {{ title }} </title>
+     </head>
+ 
+     <body>
+         <h1>Death Row Coders: Christopher Louie, Raymond Lin, Kevin Lin</h1>
+         <h2>Randomly selected occupation: <a href="{{ link }}">{{ occupation }}</a></h2>
+ 
+         <h1>Occupations Table</h1>
+         <br>
+         <table>
+             <tr>
+                 <th>Occupation</th>
+                 <th>Percentage</th>
+                 <th>Link</th>
+             </tr>
+             {% for row in collection %}
+                 <tr>
+                     <td>{{ row[0] }}</td>
+                     <td>{{ row[1] }}%</td>
+                     <td><a href="{{ row[2] }}">Link</a></td>
+                 </tr>
+             {% endfor %}
+         </table>
+     </body>
+ </html>
+ 
