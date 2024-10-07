@@ -1,39 +1,36 @@
 #Death Row Coders: Kevin Lin, Raymond Lin, Christopher Louie
 #SoftDev
 #Sep 2024
-
-import random
 from flask import Flask, render_template
-import csv
+import random, csv
+app = Flask(__name__)
 
-app = Flask(__name__)        
-
-def readfile():
-    occupations = []
-    with open('data/occupations.csv') as text:
-        reader = csv.reader(text)
+def readfile(f):
+    d = {}
+    with open (f, 'r') as listfile:
+        reader = csv.reader(listfile)
         next(reader)
         for row in reader:
-            if len(row) == 3:
-                occupation = row[0]
-                percentage = float(row[1])
-                link = row[2]
-                occupations.append((occupation, percentage, link))
-    return occupations
+            job = row[0]
+            if job == "Total":
+                continue
+            d[job] = [float(row[1]),row[2]]
+    return d        
 
-def generateRandom(occupations):
-    generated = random.random() * 99.8
-    for occupation, percentage, link in occupations:
-        generated -= percentage
-        if generated < 0:
-            return occupation, percentage, link
-    return "error", 0, ""
+def sel(d):
+    newlist = []
+    for num in list(d.values()):
+        newlist.append(num[0])
+    return random.choices(list(d.keys()), weights=newlist, k=1)
+
+@app.route("/")
+def hello_world():
+    return "No hablo queso!"
 
 @app.route("/wdywtbwygp")
-def page():
-    occupations = readfile()
-    random_occupation, percentage, link = generateRandom(occupations)
-    return render_template('tablified.html', title="Job Helper", occupation=f"{random_occupation}, {percentage}%", link=link, Header="Table", collection=occupations)
+def test_tmplt():
+    occupations = readfile("data/occupations.csv")
+    return render_template('tablified.html', collection1=occupations, occupation=sel(occupations))
 
 if __name__ == "__main__":
     app.debug = True

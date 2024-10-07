@@ -4,8 +4,8 @@
   SoftDev
   Sep 2024
  -->
- <html>
-     <style>
+<html>
+    <style>
          table {
              width: 80%;
              margin: 20px auto;
@@ -33,32 +33,29 @@
              text-align: center;
              font-family: Arial, sans-serif;
          }
-     </style>
- 
-     <head>
-         <title> {{ title }} </title>
-     </head>
- 
-     <body>
-         <h1>Death Row Coders: Christopher Louie, Raymond Lin, Kevin Lin</h1>
-         <h2>Randomly selected occupation: <a href="{{ link }}">{{ occupation }}</a></h2>
- 
-         <h1>Occupations Table</h1>
-         <br>
-         <table>
-             <tr>
-                 <th>Occupation</th>
-                 <th>Percentage</th>
-                 <th>Link</th>
-             </tr>
-             {% for row in collection %}
-                 <tr>
-                     <td>{{ row[0] }}</td>
-                     <td>{{ row[1] }}%</td>
-                     <td><a href="{{ row[2] }}">Link</a></td>
-                 </tr>
-             {% endfor %}
-         </table>
-     </body>
- </html>
+    </style>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+        <h1>Death Row Coders: Christopher Louie, Raymond Lin, Kevin Lin</h1>
+        <h2>Randomly selected occupation: {{ occupation[0] }}</h2>
+        
+        <h1>Occupations Table</h1>
+        <table>
+            <tr>
+                <th>Occupation</th>
+                <th>Percentage</th>
+                <th>Link</th>
+            </tr>
+            {% for a in collection1 %}
+            <tr>
+                <td>{{a}}</td>
+                <td>{{collection1.get(a)[0]}}</td>
+                <td><a href="{{collection1.get(a)[1]}}">{{collection1.get(a)[1]}}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
  
