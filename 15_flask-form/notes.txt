@@ -1,0 +1,20 @@
+Get:
+URL can be seen
+
+Post:
+URL cannot be seen
+
+Unsecure method
+Unsecure Method
+      
+      
+        Default Method
+        Needs to be specified to be used; does not work for all sites
+      
+      
+        Has a size limit of 2048 characters
+        Does not have a size limit
+      
+      
+        Typically used to retrieve information from a server
+        Typically used to update a resource
