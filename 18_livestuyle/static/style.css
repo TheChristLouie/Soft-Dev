@@ -34,6 +34,7 @@ nav {
 nav h2 {
     font-size: 1.5em;
     font-weight: bold;
+    color: #000000;
 }
 
 nav ul {
@@ -54,10 +55,12 @@ main h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000000;
 }
 
 main p {
     margin-bottom: 15px;
+    color: #000000;
 }
 
 footer {
