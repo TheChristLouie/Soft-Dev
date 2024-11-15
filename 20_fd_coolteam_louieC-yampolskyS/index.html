@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation How-To</title>
     <!-- Compressed CSS -->
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css" crossorigin="anonymous">
   </head>
   <body>
     <script src="js/vendor/jquery.js"></script>
@@ -15,76 +15,97 @@
     <script>
       $(document).foundation();
     </script>
+
     <!-- Nav Bar-->
     <div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Foundation</li>
-      <li>
-        <a href="#">One</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
+      <p class="description">This top bar offers navigation links and a search option for the site.</p>
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Foundation</li>
+          <li>
+            <a href="#">One</a>
+            <ul class="menu vertical">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
+          </li>
           <li><a href="#">Two</a></li>
           <li><a href="#">Three</a></li>
         </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
-</div>
-<!--Description-->
-<div class="row demo-toggle-title">
-  <div class="columns">
-    <h2>Top Bar</h2>
-    <p>A top bar (<code>.top-bar</code>) can have two sections: a left-hand section (<code>.top-bar-left</code>) and a right-hand section (<code>.top-bar-right</code>). On small screens, these sections stack on top of each other.</p>
-    <p>In the above example, our top bar includes a <a href="https://get.foundation/sites/docs/dropdown-menu.html">dropdown menu</a>, along with a text input field and action button. The dropdown menu inherits the background color of the top bar. If you're using the Sass version of Foundation, you can change this with the <code>$topbar-submenu-background</code> variable.</p>
-  </div>
-</div>
-<!-- XY Grid-->
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Description Section -->
+    <div class="row demo-toggle-title">
+      <div class="columns">
+        <h2>Top Bar</h2>
+        <p>This section introduces the top bar with navigation and search functionality. The dropdown menu adjusts with the top bar's background color. Users can easily customize this if using the Sass version of Foundation.</p>
+      </div>
+    </div>
+
+    <!-- XY Grid -->
     <div class="grid-y medium-grid-frame">
-  <div class="cell shrink header medium-cell-block-container">
-    <h1>Grid Frame Header</h1>
-    <div class="grid-x grid-padding-x">
-      <div class="cell medium-4">
-        A medium 4 cell
+      <div class="cell shrink header medium-cell-block-container">
+        <h1>Grid Frame Header</h1>
+        <p class="description">This header introduces the grid layout, organizing page sections into rows and columns.</p>
+        <div class="grid-x grid-padding-x">
+          <div class="cell medium-4">A medium 4 cell</div>
+          <div class="cell medium-4 medium-cell-block">
+            <p style="width:80vw;color:blue">
+              A medium 4 cell block... on medium screens, this content overflows to allow horizontal scrolling. Useful for displaying options side-by-side.
+            </p>
+          </div>
+          <div class="cell medium-4">A medium 4 cell</div>
+        </div>
       </div>
-      <div class="cell medium-4 medium-cell-block">
-        <p style="width:80vw;color:blue">A medium 4 cell block... on medium this content should overflow and let you horizontally scroll across... one might use this for an array of options</p>
+
+      <!-- Main Content and Sidebar -->
+      <div class="cell medium-auto medium-cell-block-container">
+        <div class="grid-x grid-padding-x">
+          <!-- Sidebar -->
+          <div class="cell medium-4 medium-cell-block-y">
+            <h2>Independent scrolling sidebar</h2>
+            <p class="description">This sidebar can scroll independently, useful for navigation or supplementary content.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mollis at diam consectetur scelerisque venenatis; ullamcorper habitasse bibendum. Eros ad quis erat tincidunt commodo cursus proin. Placerat viverra neque tristique nec ultricies facilisi per dapibus elementum. Magnis suscipit dictum natoque quisque sit tincidunt cursus eros. Netus egestas senectus varius ante mauris dictum. Finibus amet taciti adipiscing convallis egestas ligula semper vitae.
+
+              Proin at tristique fusce quisque lobortis cras dis nisl. Eleifend egestas tempor vulputate risus rhoncus himenaeos ornare proin quisque. Phasellus ornare curae vel volutpat felis sapien. Vel potenti accumsan; tortor netus aliquet sapien. Nullam eleifend sociosqu natoque parturient suspendisse sociosqu auctor felis. Justo pharetra bibendum feugiat iaculis odio dis arcu. Habitasse nullam neque sit nisl; elementum est consectetur. Aliquam libero luctus suscipit vel mattis!
+              
+              Pulvinar hendrerit proin scelerisque ad torquent massa. Praesent praesent sodales ipsum euismod nullam gravida inceptos. Leo faucibus sit pharetra donec pellentesque. Tortor hac aptent cras potenti sociosqu. Sociosqu ante a lectus tortor himenaeos eleifend. Varius curae eleifend velit consequat, consequat egestas orci et. Lectus risus sem donec; mattis sagittis cursus egestas neque. Feugiat torquent sit iaculis eu arcu aenean.
+              
+              Magna dolor phasellus nisl interdum inceptos mattis. Euismod justo parturient duis luctus dictumst duis. Est nascetur justo quisque lectus hac varius massa. Class nulla feugiat cras magnis erat. Purus venenatis convallis massa adipiscing diam torquent efficitur porta pulvinar. Taciti leo curabitur cubilia sapien, aptent proin.
+              
+              Sagittis tempor enim; aenean iaculis erat suscipit felis. Litora dolor torquent mollis blandit posuere venenatis litora diam. Libero varius interdum class libero lectus est dignissim sollicitudin. Sed ullamcorper condimentum ex imperdiet sodales feugiat. Et elit semper dui senectus ultrices fringilla eros commodo. Dolor dapibus condimentum est lacus adipiscing lobortis. Sociosqu vestibulum dictum massa condimentum enim; dis finibus sodales quis.</p>
+          </div>
+
+          <!-- Main Body Content -->
+          <div class="cell medium-8 medium-cell-block-y">
+            <h2>Independent scrolling body</h2>
+            <p class="description">This main content area also has independent scrolling, suited for the primary content of the page.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mollis at diam consectetur scelerisque venenatis; ullamcorper habitasse bibendum. Eros ad quis erat tincidunt commodo cursus proin. Placerat viverra neque tristique nec ultricies facilisi per dapibus elementum. Magnis suscipit dictum natoque quisque sit tincidunt cursus eros. Netus egestas senectus varius ante mauris dictum. Finibus amet taciti adipiscing convallis egestas ligula semper vitae.
+
+              Proin at tristique fusce quisque lobortis cras dis nisl. Eleifend egestas tempor vulputate risus rhoncus himenaeos ornare proin quisque. Phasellus ornare curae vel volutpat felis sapien. Vel potenti accumsan; tortor netus aliquet sapien. Nullam eleifend sociosqu natoque parturient suspendisse sociosqu auctor felis. Justo pharetra bibendum feugiat iaculis odio dis arcu. Habitasse nullam neque sit nisl; elementum est consectetur. Aliquam libero luctus suscipit vel mattis!
+              
+              Pulvinar hendrerit proin scelerisque ad torquent massa. Praesent praesent sodales ipsum euismod nullam gravida inceptos. Leo faucibus sit pharetra donec pellentesque. Tortor hac aptent cras potenti sociosqu. Sociosqu ante a lectus tortor himenaeos eleifend. Varius curae eleifend velit consequat, consequat egestas orci et. Lectus risus sem donec; mattis sagittis cursus egestas neque. Feugiat torquent sit iaculis eu arcu aenean.
+              
+              Magna dolor phasellus nisl interdum inceptos mattis. Euismod justo parturient duis luctus dictumst duis. Est nascetur justo quisque lectus hac varius massa. Class nulla feugiat cras magnis erat. Purus venenatis convallis massa adipiscing diam torquent efficitur porta pulvinar. Taciti leo curabitur cubilia sapien, aptent proin.
+              
+              Sagittis tempor enim; aenean iaculis erat suscipit felis. Litora dolor torquent mollis blandit posuere venenatis litora diam. Libero varius interdum class libero lectus est dignissim sollicitudin. Sed ullamcorper condimentum ex imperdiet sodales feugiat. Et elit semper dui senectus ultrices fringilla eros commodo. Dolor dapibus condimentum est lacus adipiscing lobortis. Sociosqu vestibulum dictum massa condimentum enim; dis finibus sodales quis.</p>
+          </div>
+        </div>
       </div>
-      <div class="cell medium-4">
-        A medium 4 cell
+
+      <!-- Footer -->
+      <div class="cell shrink footer">
+        <h3>Made by: CoolTeam</h3>
+        <p class="description">This footer provides a simple signature or attribution for the site creators.</p>
       </div>
     </div>
-  </div>
-  <div class="cell medium-auto medium-cell-block-container">
-    <div class="grid-x grid-padding-x">
-      <div class="cell medium-4 medium-cell-block-y">
-        <h2>Independent scrolling sidebar</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus. Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
-
-        <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
-
-      </div>
-      <div class="cell medium-8 medium-cell-block-y">
-        <h2>Independent scrolling body</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus. Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
-        <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
-        <p>Nullam vestibulum lorem nec lectus egestas, nec ullamcorper diam maximus. Maecenas condimentum, nibh at blandit semper, ex erat tempus magna, id maximus neque velit accumsan nibh. Aenean dignissim lorem eu nisl laoreet vestibulum. Vivamus efficitur et augue vitae tincidunt. Etiam et magna felis. Integer mattis, nisi aliquet scelerisque blandit, ex mi sodales ante, eget accumsan quam magna et ligula. Curabitur id tristique leo. Proin rutrum mi vitae enim rhoncus, at cursus neque eleifend. Integer ultrices volutpat tellus ac porta. Fusce sollicitudin venenatis lacinia. Fusce ante lorem, gravida semper varius non, pharetra non erat. Sed dapibus arcu turpis, ac sollicitudin nibh lacinia vel. Nullam at enim porta, luctus metus sit amet, rutrum odio. Cras tempor enim vel pellentesque sollicitudin. Maecenas ullamcorper, sem non accumsan volutpat, neque tortor pulvinar orci, ut ultrices ligula lorem ut risus.</p>
-        <p>Aliquam facilisis, nibh eget posuere suscipit, arcu sapien iaculis odio, in molestie dolor lectus vitae sem. Cras id nunc mollis mi rutrum dapibus. Quisque rutrum a augue at scelerisque. Praesent faucibus ac enim vitae gravida. Sed et sodales elit. Duis magna lectus, interdum sit amet metus a, sagittis varius magna. Proin nibh lectus, egestas a luctus ut, dapibus et enim. Curabitur fringilla ipsum vitae nunc imperdiet consectetur eget non neque. Suspendisse ultricies odio quis lorem vulputate, ac vulputate turpis feugiat. Maecenas posuere rhoncus orci, in ornare velit suscipit tempor. Curabitur pretium nisl id lorem placerat consequat. In quis quam eros. Nam mattis elit eu quam sagittis, in varius erat tempor.</p>
-        <p>Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur auctor varius arcu a consequat. Phasellus quis pulvinar enim, eu ultricies justo. Pellentesque risus libero, dapibus at erat ultricies, gravida varius erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus convallis urna, vel pretium dui velit eget ligula. Aliquam semper sed nulla a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at ultricies vulputate. Integer et convallis augue, eu aliquam enim. Mauris ut faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam lobortis nisi quis lacinia pharetra.</p>
-      </div>
-    </div>
-  </div>
-  <div class="cell shrink footer">
-    <h3>Made by: CoolTeam</h3>
-  </div>
-</div>
   </body>
 </html>
