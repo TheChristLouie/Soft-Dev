@@ -1,0 +1,13 @@
+Double Ls - Kevin Lin, Christopher Louie
+SoftDev
+K23 - NASA API
+2024-11-20
+time spent: 0.75
+
+DISCO: 
+- Both requests.get.json and request.urlopen return dictionaries.
+- json dump is used for writing data into a file, while json load is used for getting data from a file.
+
+
+QCC:
+- What is urllib used for, since request seems to be able to do the same thing.
