@@ -1,0 +1,28 @@
+Christopher Louie
+Coding Team
+K35: Now Again for the First Time
+2025-03-17
+Time Spent: 2.5 hours
+
+Notes: 
+ - CoPilot initially built the flask app using SQLAlchemy, and classes for the blogs and Users
+ - A bit of difficulty in getting it to use sqlite3 -> initially it continued to use SQLAlchemy.
+ - When we got it to use sqlite3, it made an sql file to define the tables instead of doing it in the python program
+ - Earlier versions of the flask app took a couple minutes to run
+ - Initially CoPilot didn't give us an app where we could add blog posts despite specifying it at the beginning.
+ - Error with hash -> initially used hash not supported by library of choice
+ - Tells you vulnerabilities -> Very helpful
+
+Q/C/C:
+some areas of interest...
+q0: How many tries did it take to "get it right?"
+It took about 7 to 9 tries to get something that worked.
+
+q1: Did you catch any errors? If so, how did you notice, and what did you do?
+At one point CoPilot didn't import sqlite3. We noticed this when the terminal threw an error and terminated
+the program because it hadn't been imported. When we compared the newer __init__.py to an older version, we found That
+CoPilot had removed the "import sqlite3" from the new version.
+
+q2: How similar or different is the bot's output to that of your past self / old team?
+The bot's output is a lot cleaner than the code of our past self. It's a lot easier to read and a lot more
+organized.
